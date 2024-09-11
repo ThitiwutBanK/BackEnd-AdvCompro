@@ -2,12 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
-const uri = 'mongodb://admin:MNGgng91715@bank-app.proen.app.ruk-com.cloud:11566/admin';
+mongoose.connect(
 
-
-mongoose.connect(uri)
-  .then(() => console.log('เชื่อมต่อฐานข้อมูลสำเร็จ'))
-  .catch(err => console.error('ข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล:', err));
+    {
+        useNewUrlParser : true,
+        useUnifiedTopology : true,
+    }
+);
 
 const Book = mongoose.model("Book", {
     id: {
@@ -20,7 +21,7 @@ const Book = mongoose.model("Book", {
 });
 
 const app = express();
-app.use(bodyParser.json());
+app.use(bodtParser.json());
 
 app.post("/books", async (req, res) => {
     try {
@@ -40,7 +41,7 @@ app.post("/books", async (req, res) => {
 });
 
 // Read all
-app.get("/books", async (req, res) => {
+application.get("/books", async (req, res) => {
     try {
         const books = await Book.find();
         res.send(books);

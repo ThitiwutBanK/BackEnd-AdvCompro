@@ -1,22 +1,29 @@
 {
-  "name": "backend-advcompro",
+  "name": "frontendadvcompro67",
   "version": "1.0.0",
-  "description": "Repository for Back-End",
+  "description": "FrontEnd For Adv compro 67",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "format": "prettier --write *.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThitiwutBanK/Front-End-Node.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "prettier": "^3.3.3"
+  "bugs": {
+    "url": "https://github.com/ThitiwutBanK/Front-End-Node/issues"
   },
+  "homepage": "https://github.com/ThitiwutBanK/Front-End-Node#readme",
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "node": "^22.6.0",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^5.0.0",
+    "http": "^0.0.1-security",
+    "mongoose": "^8.6.1",
     "sqlite3": "^5.1.7"
   }
 }
